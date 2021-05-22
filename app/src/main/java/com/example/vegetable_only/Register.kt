@@ -41,7 +41,7 @@ class Register : AppCompatActivity() , View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-//        auth = Firebase.auth
+
         auth = FirebaseAuth.getInstance()
         var user = FirebaseAuth.getInstance().currentUser
 
@@ -85,9 +85,13 @@ class Register : AppCompatActivity() , View.OnClickListener {
                                 // Sign in success, update UI with the signed-in user's information
 
                                 val user: FirebaseUser? = auth.getCurrentUser()
-                                Toast.makeText(this, "Successfully registered :)", Toast.LENGTH_LONG).show()
+                                Toast.makeText(this, "Successfully registered. Please login now", Toast.LENGTH_LONG).show()
+
+                                val intent = Intent(this, MainActivity::class.java).apply {}
+                                startActivity(intent)
+                                finish()
                             } else {
-                                Toast.makeText(this, "Error in registration, try again later :(", Toast.LENGTH_LONG).show()
+                                Toast.makeText(this, "Error in registration, try again later ", Toast.LENGTH_LONG).show()
                             }
 
                             // ...
