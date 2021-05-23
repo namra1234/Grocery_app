@@ -11,6 +11,11 @@
         android:theme="@style/Theme.Vegetable_only">
         <activity android:name=".mainDashboard"></activity>
         <activity android:name=".Register" />
+        <activity android:name=".Cart"></activity>
+        <activity android:name=".Settings" />
+        <activity android:name=".ProductList" />
+        <activity android:name=".ProductDetails" />
+        <activity android:name=".AllCategory" />
         <activity
             android:name=".SplashScreen"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
@@ -21,6 +26,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
     <uses-permission android:name="android.permission.INTERNET" />

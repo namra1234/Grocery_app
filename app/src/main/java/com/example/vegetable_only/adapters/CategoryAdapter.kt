@@ -14,7 +14,7 @@ import com.example.vegetable_only.constants.PRODUCT_LIST
 import com.example.vegetable_only.models.Category
 import com.example.vegetable_only.models.ProductDetailsModel
 
-class CategoryAdapter(private val context : Context, private val dataSet: ArrayList<Category>) :
+class CategoryAdapter(private val context : Context, private val    dataSet: ArrayList<Category>) :
     RecyclerView.Adapter<CategoryAdapter.ViewHolder>() {
 
     /**

@@ -37,30 +37,21 @@ class mainDashboard : AppCompatActivity() {
 
         categoryRecyclerView!!.layoutManager = linearLayoutManager
 
-//        imageView.setOnClickListener()
         setUpCategoryRecycler()
 
         seeMoreCategoryTextView!!.setOnClickListener  {
             val intent = Intent(this, AllCategory::class.java)
-//                    .apply {
-////                    putExtra(EXTRA_MESSAGE, message)
-//                }
             startActivity(intent)
         }
 
         settingsImageView!!.setOnClickListener  {
             val intent = Intent(this, Settings::class.java)
-//                    .apply {
-////                    putExtra(EXTRA_MESSAGE, message)
-//                }
             startActivity(intent)
         }
 
         cartImageView!!.setOnClickListener  {
             val intent = Intent(this, Cart::class.java)
-//                    .apply {
-////                    putExtra(EXTRA_MESSAGE, message)
-//                }
+
             startActivity(intent)
         }
 
@@ -68,18 +59,16 @@ class mainDashboard : AppCompatActivity() {
 
     fun setUpCategoryRecycler(){
         categoryList = arrayListOf<Category>()
-        categoryList!!.add(Category(1, R.drawable.organic))
-        categoryList!!.add(Category(2, R.drawable.organic))
-        categoryList!!.add(Category(3, R.drawable.organic))
-        categoryList!!.add(Category(4, R.drawable.organic))
+        categoryList!!.add(Category(1, R.drawable.dairy))
+        categoryList!!.add(Category(2, R.drawable.spices))
+        categoryList!!.add(Category(3, R.drawable.beuty))
+        categoryList!!.add(Category(4, R.drawable.dairy))
         categoryList!!.add(Category(5, R.drawable.organic))
 
 
         categoryViewAdaper = CategoryAdapter(this,categoryList!!)
 
         categoryRecyclerView!!.adapter = categoryViewAdaper
-
-
 
     }
 
